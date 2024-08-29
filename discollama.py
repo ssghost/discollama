@@ -159,9 +159,6 @@ class Discollama:
 def main():
   parser = argparse.ArgumentParser()
 
-  parser.add_argument('--ollama-scheme', default=os.getenv('OLLAMA_SCHEME', 'http'), choices=['http', 'https'])
-  parser.add_argument('--ollama-host', default=os.getenv('OLLAMA_HOST', '127.0.0.1'), type=str)
-  parser.add_argument('--ollama-port', default=os.getenv('OLLAMA_PORT', 11434), type=int)
   parser.add_argument('--ollama-model', default=os.getenv('OLLAMA_MODEL', 'llama2'), type=str)
 
   parser.add_argument('--redis-host', default=os.getenv('REDIS_HOST', '127.0.0.1'), type=str)
@@ -175,7 +172,7 @@ def main():
   intents.message_content = True
 
   Discollama(
-    ollama.AsyncClient(host=f'{args.ollama_scheme}://{args.ollama_host}:{args.ollama_port}'),
+    ollama.AsyncClient(),
     discord.Client(intents=intents),
     redis.Redis(host=args.redis_host, port=args.redis_port, db=0, decode_responses=True),
     model=args.ollama_model,
