@@ -12,7 +12,8 @@
 DISCORD_TOKEN=xxxxx docker compose up
 ```
 
-> Note: You must setup a [Discord Bot](https://discord.com/developers/applications) and set environment variable `DISCORD_TOKEN` before `discollama.py` can access Discord.
+> [!NOTE]
+> You must setup a [Discord Bot](https://discord.com/developers/applications) and set environment variable `DISCORD_TOKEN` before `discollama.py` can access Discord.
 
 `discollama.py` requires an [Ollama](https://github.com/ollama/ollama) server. Follow the steps in [ollama/ollama](https://github.com/ollama/ollama) repository to setup Ollama.
 
