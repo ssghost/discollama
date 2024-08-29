@@ -1,6 +1,6 @@
 # discollama
 
-`discollama` is a Discord bot powered by a local large language model backed by [Ollama](https://github.com/jmorganca/ollama).
+`discollama` is a Discord bot powered by a local large language model backed by [Ollama](https://github.com/ollama/ollama).
 
 ## Dependencies
 
@@ -14,7 +14,7 @@ DISCORD_TOKEN=xxxxx docker compose up
 
 > Note: You must setup a [Discord Bot](https://discord.com/developers/applications) and set environment variable `DISCORD_TOKEN` before `discollama.py` can access Discord.
 
-`discollama.py` requires an [Ollama](https://github.com/jmorganca/ollama) server. Follow the steps in [jmorganca/ollama](https://github.com/jmorganca/ollama) repository to setup Ollama.
+`discollama.py` requires an [Ollama](https://github.com/ollama/ollama) server. Follow the steps in [ollama/ollama](https://github.com/ollama/ollama) repository to setup Ollama.
 
 By default, it uses `127.0.0.1:11434` which can be overwritten with `OLLAMA_HOST`.
 
@@ -35,7 +35,7 @@ environment:
   - OLLAMA_MODEL=mymodel
 ```
 
-See [jmorganca/ollama](https://github.com/jmorganca/ollama/blob/main/docs/modelfile.md) for more details.
+See [ollama/ollama](https://github.com/ollama/ollama/blob/main/docs/modelfile.md) for more details.
 
 ## Activating the Bot
 
